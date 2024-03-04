@@ -48,31 +48,13 @@
                 <td></td>
                 <td></td>
             </tr>
-            <script>
-                function calculate() {
-                var inputValue = parseFloat(document.getElementById('inputValue').value);
-
-                var pickupOfficial = (inputValue * 2) - 10;
-                var deliveryOfficial = (inputValue * 2) - 10; 
-
-                var pickup4px = 10.8 + (inputValue - 10.8 ) * 6.4;
-                var delivery4px = 33.5 + (inputValue - 33.5 ) * 6.9;
-
-                var table = document.getElementById('resultTable');
-                table.rows[1].cells[1].innerHTML = pickupOfficial.toFixed(1);
-                table.rows[1].cells[2].innerHTML = deliveryOfficial.toFixed(1);
-
-                table.rows[2].cells[1].innerHTML = pickup4px.toFixed(1);
-                table.rows[2].cells[2].innerHTML = delivery4px.toFixed(1);
-                }
-
-                inputValue.addEventListener("keypress", function(event) {
-                if (event.key === "Enter") {
-                    event.preventDefault();
-                    document.getElementById("calculatebutton").click();
-                }
-                });
-            </script>
+            <tr>
+                <th>淘派</th>
+                <td></td>
+                <td></td>
+            </tr>
+            <script type="text/javascript" src="js/calculation.js"></script>
+            <script type="text/javascript" src="js/button.js"></script>
             </table>
         </div>
     </div>
