@@ -1,0 +1,7 @@
+﻿Brand,mode,weightLower,weightUpper,first,next,remarks
+4px,Pick up,0,20,10.8,6.4,
+4px,Delivery,0,20,33.5,6.9,
+Taopai,Pick up,0,50,10.9,4.687,
+Taopai,Delivery,0,49,15.151,4.905,
+Taopai,Delivery,50,200,0,4.36,
+Taopai,Locker,0,5,19.62,4.905,尺寸不可超過 45*30*37cm

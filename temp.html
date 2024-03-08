@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CSV to HTML Table</title>
+  <script src="https://cdn.jsdelivr.net/npm/papaparse@5.3.2/papaparse.min.js"></script>
+</head>
+<body>
+
+    
+        <div id="employee-list">
+        </div>
+        
+        <script>    
+        const employees = 
+            {
+                "employees": [
+                {
+                "id": 1,
+                "name": "John Doe",
+                "age": 32,
+                "city": "New York"
+                },
+                {
+                "id": 2,
+                "name": "Jane Doe",
+                "age": 27,
+                "city": "Chicago"
+                },
+                {
+                "id": 3,
+                "name": "Bob Smith",
+                "age": 45,
+                "city": "Los Angeles"
+                }
+                ]
+                };
+        
+        for (let employee of employees) {
+          const listItem = document.createElement("li");
+          listItem.innerText = `${employee.name} (${employee.age})`;
+          document.getElementById("employee-list").appendChild(listItem);
+        }
+        </script>
+
+</body>
+</html>
