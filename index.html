@@ -11,18 +11,25 @@
     <!-- Connect the html to the css file -->
     <link rel="stylesheet" href="main.css">
 
-    <script>
-        $(function() {
-          $('#nav').load('nav.html #nav');
-        });
-    </script>
-
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3672598890287029"
         crossorigin="anonymous"></script>
 </head>
 
 <body>
-    <div id="nav"></div>
+    <div id = "nav">
+        <div class="menu-bar">
+            <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Menu
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" href="index.html">運費計算機</a>
+                    <a class="dropdown-item" href="contact.html">聯絡我們</a>
+                </div>
+            </div>
+        </div>
+        </div>
 
     <div class="main">
         <div class="input">
