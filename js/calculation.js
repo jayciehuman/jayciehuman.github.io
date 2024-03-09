@@ -1,23 +1,20 @@
 function calculate() {
+
+                
+    var tableBody = document.getElementById("resultTable").getElementsByTagName("tbody")[0];
+    tableBody.innerHTML = "";
     var inputValue = parseFloat(document.getElementById('inputValue').value);
-    var thresholdOfficial = 0
-    var threshold4px = 1
 
-    var pickupOfficial = (inputValue * 2) - 10;
-    var deliveryOfficial = (inputValue * 2) - 10; 
-    
-    if (inputValue <= threshold4px) {
-        var pickup4px = 10.8;
-        var delivery4px = 33.5;
-    } else {
-        var pickup4px = 10.8 + (inputValue - 1 ) * 6.4;
-        var delivery4px = 33.5 + (inputValue - 1 ) * 6.9;
-    }                
+    for (var i = 0; i < data.length; i++) {
+        var row = tableBody.insertRow(i);
 
-    var table = document.getElementById('resultTable');
-    table.rows[1].cells[1].innerHTML = pickupOfficial.toFixed(1);
-    table.rows[1].cells[2].innerHTML = deliveryOfficial.toFixed(1);
+        var nameCell = row.insertCell(0);
+        nameCell.innerHTML = data[i].brand;
 
-    table.rows[2].cells[1].innerHTML = pickup4px.toFixed(1);
-    table.rows[2].cells[2].innerHTML = delivery4px.toFixed(1);
+        var ageCell = row.insertCell(1);
+        ageCell.innerHTML = (data[i].next * inputValue).toFixed(1);
+
+        var emailCell = row.insertCell(2);
+        emailCell.innerHTML = data[i].remarks;
     }
+}
