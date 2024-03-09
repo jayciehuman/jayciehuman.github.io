@@ -10,26 +10,21 @@
 
     <!-- Connect the html to the css file -->
     <link rel="stylesheet" href="main.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script>
+        $(function() {
+          $('#nav').load('nav.html');
+        });
+    </script>
+
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3672598890287029"
         crossorigin="anonymous"></script>
 </head>
 
 <body>
-    <div class="menu-bar">
-        <div class="dropdown">
-            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
-                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Menu
-            </button>
-            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <a class="dropdown-item" href="index.html">By Weight</a>
-                <a class="dropdown-item" href="temp.html">By Size</a>
-            </div>
-        </div>
-    </div>
-
+    <div id="nav"></div>
     <div class="main">
-
         <div class="input">
             <input type="float" id="inputValue" placeholder="Enter weight (kg)">
             <button type="button" id="calculatebutton" onclick="calculate()">Calculate</button>
